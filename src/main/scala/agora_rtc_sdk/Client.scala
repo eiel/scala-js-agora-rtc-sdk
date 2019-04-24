@@ -232,7 +232,7 @@ trait Client extends js.Object {
   def subscribe(stream: Stream, options: SubscribeOptions, onFailure: OnFailure): Unit = js.native
 
   /**
-    * @ses https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#unpublish
+    * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#unpublish
     */
   def unpublish(stream: Stream): Unit = js.native
 
