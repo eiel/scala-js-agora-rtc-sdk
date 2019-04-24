@@ -17,3 +17,10 @@ lazy val root = (project in file(".")).
   settings(
     name := "Scala.js facade for AgoraRTC SDK(Web)",
   )
+
+publishTo := Some(
+  if (isSnapshot.value)
+    Opts.resolver.sonatypeSnapshots
+  else
+    Opts.resolver.sonatypeStaging
+)
