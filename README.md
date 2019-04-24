@@ -1,5 +1,11 @@
 # Scala.js facade for AgoraRTC SDK(Web)
 
+## Versions of AgoraRTC SDK
+
+| Facade | AgoraRTC SDK | Scala versions |
+|:-----:|:---------:|:---------------:
+| 0.0.1 | 2.6.1 | 2.12 |
+
 ## Links
 
 [AgoraRTC SDK(Web)](https://www.npmjs.com/package/agora-rtc-sdk)
