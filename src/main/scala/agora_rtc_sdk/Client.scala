@@ -270,8 +270,8 @@ trait ConfigPublisher extends js.Object {
 }
 
 trait ClientLowStreamParameter extends js.Object {
-  val bitrate: Int
-  val framerate: Int
-  val height: Int
-  val width: Int
+  val bitrate: js.UndefOr[Int]
+  val framerate: js.UndefOr[Int]
+  val height: js.UndefOr[Int]
+  val width: js.UndefOr[Int]
 }

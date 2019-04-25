@@ -9,15 +9,6 @@ trait ClientConfig extends js.Object {
   val codec: String
   val mode: String
   val proxyServer: js.UndefOr[String] = js.undefined
-  val turnServer: js.UndefOr[TurnServer] = js.undefined
-
-  trait TurnServer {
-    val forceturn: js.UndefOr[Boolean] = js.undefined
-    val password: String
-    val tcpport: js.UndefOr[String] = js.undefined
-    val turnServerURL: String
-    val udpport: String
-    val username: String
-  }
+  val turnServer: js.UndefOr[ClientConfigTurnServer] = js.undefined
 }
 
