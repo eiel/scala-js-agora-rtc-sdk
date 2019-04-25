@@ -254,10 +254,11 @@ trait SubscribeOptions {
 }
 
 trait ClientConfigTurnServer extends js.Object {
-  val forceturn: Boolean
+  val forceturn: js.UndefOr[Boolean]
   val password: Boolean
   val tcpport: js.UndefOr[String] = js.undefined
-  val udpport: js.UndefOr[String] = js.undefined
+  val turnServerURL: String
+  val udpport: String
   val username: String
 }
 
