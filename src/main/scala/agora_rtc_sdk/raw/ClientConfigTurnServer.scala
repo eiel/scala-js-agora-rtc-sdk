@@ -5,7 +5,7 @@ import scala.scalajs.js.UndefOr
 
 trait ClientConfigTurnServer extends js.Object {
   val forceturn: js.UndefOr[Boolean]
-  val password: Boolean
+  val password: String
   val tcpport: js.UndefOr[String] = js.undefined
   val turnServerURL: String
   val udpport: String
@@ -14,7 +14,7 @@ trait ClientConfigTurnServer extends js.Object {
 
 object ClientConfigTurnServer {
   @inline
-  def apply(forceturn: js.UndefOr[Boolean], password: Boolean, tcpport: js.UndefOr[String] = js.undefined, turnServerURL: String, udpport: String, username: String): ClientConfigTurnServer = create(
+  def apply(forceturn: js.UndefOr[Boolean], password: String, tcpport: js.UndefOr[String] = js.undefined, turnServerURL: String, udpport: String, username: String): ClientConfigTurnServer = create(
     _forceturn = forceturn,
     _password = password,
     _tcpport = tcpport,
@@ -24,9 +24,9 @@ object ClientConfigTurnServer {
   )
 
   @inline
-  def create(_forceturn: js.UndefOr[Boolean], _password: Boolean, _tcpport: js.UndefOr[String], _turnServerURL: String, _udpport: String, _username: String): ClientConfigTurnServer = new ClientConfigTurnServer {
+  def create(_forceturn: js.UndefOr[Boolean], _password: String, _tcpport: js.UndefOr[String], _turnServerURL: String, _udpport: String, _username: String): ClientConfigTurnServer = new ClientConfigTurnServer {
     override val forceturn: UndefOr[Boolean] = _forceturn
-    override val password: Boolean = _password
+    override val password: String = _password
     override val tcpport: UndefOr[String] = _tcpport
     override val turnServerURL: String = _turnServerURL
     override val udpport: String = _udpport

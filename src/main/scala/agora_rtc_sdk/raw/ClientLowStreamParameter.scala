@@ -4,10 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.UndefOr
 
 trait ClientLowStreamParameter extends js.Object {
-  val bitrate: js.UndefOr[Int]
-  val framerate: js.UndefOr[Int]
-  val height: js.UndefOr[Int]
-  val width: js.UndefOr[Int]
+  val bitrate: js.UndefOr[Int] = js.undefined
+  val framerate: js.UndefOr[Int] = js.undefined
+  val height: js.UndefOr[Int] = js.undefined
+  val width: js.UndefOr[Int] = js.undefined
 }
 
 object ClientLowStreamParameter {
