@@ -26,6 +26,7 @@ object ClientConfig {
     _proxyServer = proxyServer,
     _turnServer = turnServer,
   )
+
   @inline
   def create(
               _codec: String,

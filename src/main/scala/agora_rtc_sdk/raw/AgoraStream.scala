@@ -211,7 +211,7 @@ trait AgoraStream extends js.Object {
     * @param sonudId
     * @param filePath
     */
-  def preloadEffect(sonudId: SoundId, filePath: String) : Unit = js.native
+  def preloadEffect(sonudId: SoundId, filePath: String): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#preloadeffect
@@ -219,7 +219,7 @@ trait AgoraStream extends js.Object {
     * @param filePath
     * @param callback
     */
-  def preloadEffect(sonudId: SoundId, filePath: String, callback: OnFailure) : Unit = js.native
+  def preloadEffect(sonudId: SoundId, filePath: String, callback: OnFailure): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#removetrack
@@ -297,6 +297,7 @@ trait AgoraStream extends js.Object {
     * @param callback
     */
   def setAudioMixingPosition(position: Int, callback: js.Function0[Unit]): Unit = js.native
+
   def setAudioMixingPosition(position: Int, callback: js.Function0[Unit], onFailure: js.Function1[String, Unit]): Unit = js.native
 
   /**

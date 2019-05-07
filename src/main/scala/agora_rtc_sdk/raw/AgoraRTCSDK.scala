@@ -31,7 +31,7 @@ object AgoraRTCSDK extends js.Object {
   def createStream(spec: StreamSpec): AgoraStream = js.native
 
   /**
-    *  @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/globals.html#getdevices
+    * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/globals.html#getdevices
     */
   def getDevices(callback: js.Function1[js.Array[MediaDeviceInfo], Unit]): Boolean = js.native
 
