@@ -27,7 +27,7 @@ object ClientConfigTurnServer {
   def create(_forceturn: js.UndefOr[Boolean], _password: Boolean, _tcpport: js.UndefOr[String], _turnServerURL: String, _udpport: String, _username: String): ClientConfigTurnServer = new ClientConfigTurnServer {
     override val forceturn: UndefOr[Boolean] = _forceturn
     override val password: Boolean = _password
-    override val tcpport: UndefOr[String] = tcpport
+    override val tcpport: UndefOr[String] = _tcpport
     override val turnServerURL: String = _turnServerURL
     override val udpport: String = _udpport
     override val username: String = _username
