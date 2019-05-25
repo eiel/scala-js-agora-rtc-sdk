@@ -20,5 +20,5 @@ trait RemoteStreamStats extends js.Object {
   val videoReceivePackets: String
   val videoReceivePacketsLost: String
   val videoReceivedResolutionHeight: js.UndefOr[String] = js.undefined
-  val videoReceivedResolutionWidth: js.UndefOr[String] = js.undefined
+  val videoReceivedResolutionWidth: js.UndefOr[String]  = js.undefined
 }

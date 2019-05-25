@@ -7,7 +7,7 @@ import scala.scalajs.js
   */
 @native
 trait TransportStats extends js.Object {
-  val NetworkType: js.UndefOr[String] = js.undefined
-  val RTT: js.UndefOr[String] = js.undefined
+  val NetworkType: js.UndefOr[String]                = js.undefined
+  val RTT: js.UndefOr[String]                        = js.undefined
   val OutgoingAvailableBandwidth: js.UndefOr[String] = js.undefined
 }

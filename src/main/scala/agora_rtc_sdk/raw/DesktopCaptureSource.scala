@@ -14,10 +14,10 @@ trait DesktopCaptureSource extends js.Object {
 object DesktopCaptureSource {
   @inline
   def apply(
-             id: String,
-             name: String,
-             thumbnail: Any,
-           ): DesktopCaptureSource = create(
+      id: String,
+      name: String,
+      thumbnail: Any,
+  ): DesktopCaptureSource = create(
     _id = id,
     _name = name,
     _thumbnail = thumbnail,
@@ -25,12 +25,12 @@ object DesktopCaptureSource {
 
   @inline
   def create(
-              _id: String,
-              _name: String,
-              _thumbnail: Any,
-            ): DesktopCaptureSource = new DesktopCaptureSource {
-    override val id: String = _id
-    override val name: String = _name
+      _id: String,
+      _name: String,
+      _thumbnail: Any,
+  ): DesktopCaptureSource = new DesktopCaptureSource {
+    override val id: String     = _id
+    override val name: String   = _name
     override val thumbnail: Any = _thumbnail
   }
 }

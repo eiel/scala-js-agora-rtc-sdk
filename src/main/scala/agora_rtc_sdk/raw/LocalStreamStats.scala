@@ -16,5 +16,5 @@ trait LocalStreamStats extends js.Object {
   val videoSendPackets: String
   val videoSendPacketsLost: String
   val videoSendResolutionHeight: js.UndefOr[String] = js.undefined
-  val videoSendResolutionWidth: js.UndefOr[String] = js.undefined
+  val videoSendResolutionWidth: js.UndefOr[String]  = js.undefined
 }

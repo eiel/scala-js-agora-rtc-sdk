@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.JSImport
 @js.native
 @JSImport("aroga-rtc-sdk", JSImport.Namespace)
 object AgoraRTCSDK extends js.Object {
+
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/globals.html#version
     */
@@ -39,7 +40,6 @@ object AgoraRTCSDK extends js.Object {
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/globals.html#getscreensources
     */
   def getScreenSources(callback: js.Function2[Any, js.Array[DesktopCaptureSource], Any]): Unit = js.native
-
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/globals.html#getsupportedcodec
