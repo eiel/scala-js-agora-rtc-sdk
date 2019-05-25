@@ -8,6 +8,7 @@ import scala.scalajs.js.|
   */
 @js.native
 trait AgoraStream extends js.Object {
+
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#addtrack
     * @param track
@@ -248,7 +249,6 @@ trait AgoraStream extends js.Object {
     */
   def replaceTrack(track: MediaStreamTrack, onSuccess: js.Function0[Unit], onFailure: OnFailure): Unit = js.native
 
-
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#resumealleffects
     */
@@ -259,7 +259,6 @@ trait AgoraStream extends js.Object {
     * @param callback
     */
   def resumeAllEffects(callback: js.Function1[String | Null, Unit]): Unit = js.native
-
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#resumeaudiomixing
@@ -298,7 +297,8 @@ trait AgoraStream extends js.Object {
     */
   def setAudioMixingPosition(position: Int, callback: js.Function0[Unit]): Unit = js.native
 
-  def setAudioMixingPosition(position: Int, callback: js.Function0[Unit], onFailure: js.Function1[String, Unit]): Unit = js.native
+  def setAudioMixingPosition(position: Int, callback: js.Function0[Unit], onFailure: js.Function1[String, Unit]): Unit =
+    js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#setaudiooutput
@@ -306,7 +306,11 @@ trait AgoraStream extends js.Object {
     * @param onSuccess
     * @param onFailure
     */
-  def setAudioOutput(deviceId: String, onSuccess: js.UndefOr[js.Function0[Unit]], onFailure: js.UndefOr[js.Function1[String, Unit]]): Unit = js.native
+  def setAudioOutput(
+      deviceId: String,
+      onSuccess: js.UndefOr[js.Function0[Unit]],
+      onFailure: js.UndefOr[js.Function1[String, Unit]],
+  ): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#setaudioprofile
@@ -428,7 +432,12 @@ trait AgoraStream extends js.Object {
     * @param onSuccess
     * @param onFailure
     */
-  def switchDevice(`type`: String, deviceId: String, onSuccess: js.Function0[Unit], onFailure: js.Function1[String, Unit]): Unit = js.native
+  def switchDevice(
+      `type`: String,
+      deviceId: String,
+      onSuccess: js.Function0[Unit],
+      onFailure: js.Function1[String, Unit],
+  ): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#unloadeffect
@@ -470,7 +479,7 @@ trait PlayEffectOptions extends js.Object {
 
 trait StreamPlayOption extends js.Object {
   // type fit = "cover" | "contain"
-  val fit: js.UndefOr[String] = js.undefined
+  val fit: js.UndefOr[String]    = js.undefined
   val muted: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -479,12 +488,11 @@ trait StreamInitErrorMsg extends js.Object {
 }
 
 trait StreamInitError extends js.Object {
-  val `type`: js.UndefOr[String] = js.undefined
+  val `type`: js.UndefOr[String]                   = js.undefined
   val msg: js.UndefOr[StreamInitErrorMsg | String] = js.undefined
 }
 
 trait AudioEffectVolume {
   val soundID: Short // 1 .. 1000
-  val volume: Byte // 0 .. 100
+  val volume: Byte   // 0 .. 100
 }
-

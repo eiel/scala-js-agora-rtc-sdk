@@ -8,5 +8,5 @@ import scala.scalajs.js
 @js.native
 trait NetworkQualityStats extends js.Object {
   val downlinkNetworkQuality: js.UndefOr[String] = js.undefined
-  val uplinkNetworkQuality: js.UndefOr[String] = js.undefined
+  val uplinkNetworkQuality: js.UndefOr[String]   = js.undefined
 }

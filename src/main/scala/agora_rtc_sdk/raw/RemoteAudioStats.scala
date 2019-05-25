@@ -7,11 +7,11 @@ import scala.scalajs.js
   */
 @js.native
 trait RemoteAudioStats extends js.Object {
-  val CodecType: js.UndefOr[String] = js.undefined
-  val End2EndDelay: js.UndefOr[String] = js.undefined
-  val MuteState: js.UndefOr[String] = js.undefined
+  val CodecType: js.UndefOr[String]      = js.undefined
+  val End2EndDelay: js.UndefOr[String]   = js.undefined
+  val MuteState: js.UndefOr[String]      = js.undefined
   val PacketLossRate: js.UndefOr[String] = js.undefined
-  val RecvBitrate: js.UndefOr[String] = js.undefined
-  val RecvLevel: js.UndefOr[String] = js.undefined
+  val RecvBitrate: js.UndefOr[String]    = js.undefined
+  val RecvLevel: js.UndefOr[String]      = js.undefined
   val TransportDelay: js.UndefOr[String] = js.undefined
 }

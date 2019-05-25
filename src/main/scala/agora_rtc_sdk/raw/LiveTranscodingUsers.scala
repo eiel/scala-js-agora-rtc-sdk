@@ -19,14 +19,14 @@ trait LiveTranscodingUsers extends js.Object {
 object LiveTranscodingUsers {
   @inline
   def apply(
-             alpha: Double,
-             height: Int,
-             uid: Int | String,
-             width: Int,
-             x: Int,
-             y: Int,
-             zOrder: Byte,
-           ): LiveTranscodingUsers = create(
+      alpha: Double,
+      height: Int,
+      uid: Int | String,
+      width: Int,
+      x: Int,
+      y: Int,
+      zOrder: Byte,
+  ): LiveTranscodingUsers = create(
     _alpha = alpha,
     _height = height,
     _uid = uid,
@@ -38,20 +38,20 @@ object LiveTranscodingUsers {
 
   @inline
   def create(
-              _alpha: Double,
-              _height: Int,
-              _uid: Int | String,
-              _width: Int,
-              _x: Int,
-              _y: Int,
-              _zOrder: Byte,
-            ): LiveTranscodingUsers = new LiveTranscodingUsers {
-    override val alpha: Double = _alpha
-    override val height: Int = _height
+      _alpha: Double,
+      _height: Int,
+      _uid: Int | String,
+      _width: Int,
+      _x: Int,
+      _y: Int,
+      _zOrder: Byte,
+  ): LiveTranscodingUsers = new LiveTranscodingUsers {
+    override val alpha: Double     = _alpha
+    override val height: Int       = _height
     override val uid: Int | String = _uid
-    override val width: Int = _width
-    override val x: Int = _x
-    override val y: Int = _y
-    override val zOrder: Volume = _zOrder
+    override val width: Int        = _width
+    override val x: Int            = _x
+    override val y: Int            = _y
+    override val zOrder: Volume    = _zOrder
   }
 }

@@ -8,11 +8,11 @@ import scala.scalajs.js.|
   */
 @native
 trait TranscodingUser extends js.Object {
-  val alpha: js.UndefOr[Double] = js.undefined
-  val height: js.UndefOr[Short] = js.undefined
+  val alpha: js.UndefOr[Double]        = js.undefined
+  val height: js.UndefOr[Short]        = js.undefined
   val uid: js.UndefOr[Double | String] = js.undefined
-  val width: js.UndefOr[Short] = js.undefined
-  val x: js.UndefOr[Short] = js.undefined
-  val y: js.UndefOr[Short] = js.undefined
-  val zOrder: js.UndefOr[Byte] = js.undefined
+  val width: js.UndefOr[Short]         = js.undefined
+  val x: js.UndefOr[Short]             = js.undefined
+  val y: js.UndefOr[Short]             = js.undefined
+  val zOrder: js.UndefOr[Byte]         = js.undefined
 }

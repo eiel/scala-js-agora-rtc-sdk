@@ -8,16 +8,15 @@ ThisBuild / crossScalaVersions := Seq(scala212, scala213)
 ThisBuild / scalacOptions ++= ScalacOptions.basic
 ThisBuild / scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
   case Some((2, 12)) => ScalacOptions.forScala212
-  case _ => Seq()
+  case _             => Seq()
 })
 ThisBuild / scalacOptions ++= {
   if (scalaJSVersion.startsWith("1.0")) ScalacOptions.forScalaJS.filter(_ != "-P:scalajs:sjsDefinedByDefault")
   else ScalacOptions.forScalaJS
 }
 
-lazy val root = (project in file(".")).
-  enablePlugins(ScalaJSPlugin).
-  settings(
+lazy val root = (project in file("."))
+  .enablePlugins(ScalaJSPlugin).settings(
     name := "Scala.js facade for AgoraRTC SDK(Web)",
   )
 
@@ -25,5 +24,5 @@ publishTo := Some(
   if (isSnapshot.value)
     Opts.resolver.sonatypeSnapshots
   else
-    Opts.resolver.sonatypeStaging
+    Opts.resolver.sonatypeStaging,
 )

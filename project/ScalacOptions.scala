@@ -25,10 +25,10 @@ object ScalacOptions {
     // Warn when nullary methods return Unit.
     "-Ywarn-nullary-unit",
     // Warn when imports are unused.
-    "-Ywarn-unused-import"
+    "-Ywarn-unused-import",
   )
 
   val forScalaJS: Seq[String] = Seq(
-    "-P:scalajs:sjsDefinedByDefault"
+    "-P:scalajs:sjsDefinedByDefault",
   )
 }

@@ -8,6 +8,7 @@ import scala.scalajs.js.|
   */
 @js.native
 trait AgoraClient extends js.Object {
+
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#addinjectstreamurl
     */
@@ -16,7 +17,10 @@ trait AgoraClient extends js.Object {
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#configpublisher
     */
-  @deprecated("use startLiveStreaming and setLiveTranscoding anhttps://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#configpublisherd stopLiveStreaming", "")
+  @deprecated(
+    "use startLiveStreaming and setLiveTranscoding anhttps://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#configpublisherd stopLiveStreaming",
+    "",
+  )
   def configPublisher(config: ConfigPublisher): Unit = js.native
 
   /**
@@ -26,7 +30,10 @@ trait AgoraClient extends js.Object {
 
   def disableDualStream(onSuccess: js.Function0[Unit]): Unit = js.native
 
-  def disableDualStream(onSuccess: js.Function0[Unit], onFailure: js.Function1[String | Double | js.Error, Unit]): Unit = js.native
+  def disableDualStream(
+      onSuccess: js.Function0[Unit],
+      onFailure: js.Function1[String | Double | js.Error, Unit],
+  ): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#enableaudiovolumeindicator
@@ -40,7 +47,8 @@ trait AgoraClient extends js.Object {
 
   def enableDualStream(onSuccess: js.Function0[Unit]): Unit = js.native
 
-  def enableDualStream(onSuccess: js.Function0[Unit], onFailure: js.Function1[String | Double | js.Error, Unit]): Unit = js.native
+  def enableDualStream(onSuccess: js.Function0[Unit], onFailure: js.Function1[String | Double | js.Error, Unit]): Unit =
+    js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#getcameras
@@ -116,9 +124,20 @@ trait AgoraClient extends js.Object {
     */
   def join(tokenOrKey: String, channel: String, uid: String | Double): Unit = js.native
 
-  def join(tokenOrKey: String, channel: String, uid: String | Double, onSuccess: js.Function1[String | Int, Unit]): Unit = js.native
+  def join(
+      tokenOrKey: String,
+      channel: String,
+      uid: String | Double,
+      onSuccess: js.Function1[String | Int, Unit],
+  ): Unit = js.native
 
-  def join(tokenOrKey: String, channel: String, uid: String | Double, onSuccess: js.Function1[String | Int, Unit], onFailure: js.Function1[String | Double | js.Error, Unit]): Unit = js.native
+  def join(
+      tokenOrKey: String,
+      channel: String,
+      uid: String | Double,
+      onSuccess: js.Function1[String | Int, Unit],
+      onFailure: js.Function1[String | Double | js.Error, Unit],
+  ): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#leave
@@ -141,7 +160,6 @@ trait AgoraClient extends js.Object {
   def publish(stream: AgoraStream): Unit = js.native
 
   def publish(stream: AgoraStream, onFailure: OnFailure): Unit = js.native
-
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#removeinjectstreamurl
@@ -247,5 +265,3 @@ trait AgoraClient extends js.Object {
   def unsubscribe(stream: AgoraStream, onFailure: OnFailure): Unit = js.native
 
 }
-
-
