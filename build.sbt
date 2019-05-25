@@ -10,7 +10,10 @@ ThisBuild / scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) m
   case Some((2, 12)) => ScalacOptions.forScala212
   case _ => Seq()
 })
-ThisBuild / scalacOptions ++= ScalacOptions.forScalaJS
+ThisBuild / scalacOptions ++= {
+  if (scalaJSVersion.startsWith("1.0")) ScalacOptions.forScalaJS.filter(_ != "-P:scalajs:sjsDefinedByDefault")
+  else ScalacOptions.forScalaJS
+}
 
 lazy val root = (project in file(".")).
   enablePlugins(ScalaJSPlugin).
