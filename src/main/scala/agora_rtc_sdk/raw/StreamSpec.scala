@@ -21,6 +21,7 @@ trait StreamSpec extends js.Object {
   val streamID: Double
   val video: Boolean
   val videoSource: js.UndefOr[MediaStreamTrack] = js.undefined
+  val sourceId: js.UndefOr[String]
 }
 
 object StreamSpec {
@@ -38,6 +39,7 @@ object StreamSpec {
       streamID: Double,
       video: Boolean,
       videoSource: js.UndefOr[MediaStreamTrack] = js.undefined,
+      sourceId: js.UndefOr[String] = js.undefined,
   ): StreamSpec = create(
     _audio = audio,
     _audioProcessing = audioProcessing,
@@ -51,6 +53,7 @@ object StreamSpec {
     _streamID = streamID,
     _video = video,
     _videoSource = videoSource,
+    _sourceId = sourceId,
   )
 
   @inline
@@ -67,6 +70,7 @@ object StreamSpec {
       _streamID: Double,
       _video: Boolean,
       _videoSource: js.UndefOr[MediaStreamTrack] = js.undefined,
+      _sourceId: js.UndefOr[String] = js.undefined,
   ): StreamSpec = new StreamSpec {
     override val audio: Boolean                                      = _audio
     override val audioProcessing: UndefOr[StreamSpecAudioProcessing] = _audioProcessing
@@ -80,6 +84,7 @@ object StreamSpec {
     override val streamID: Double                                    = _streamID
     override val video: Boolean                                      = _video
     override val videoSource: UndefOr[MediaStreamTrack]              = _videoSource
+    override val sourceId: UndefOr[String] = _sourceId
   }
 }
 
