@@ -11,7 +11,7 @@ trait LocalVideoStats extends js.Object {
   val CaptureResolutionHeight: js.UndefOr[String] = js.undefined
   val CaptureResolutionWidth: js.UndefOr[String]  = js.undefined
   val EncodeDelay: js.UndefOr[String]             = js.undefined
-  val MuteState: js.UndefOr[String]               = js.undefined
+  val MuteState: js.UndefOr[compat.MuteState]     = js.undefined
   val SendBitrate: js.UndefOr[String]             = js.undefined
   val SendFrameRate: js.UndefOr[String]           = js.undefined
   val SendResolutionHeight: js.UndefOr[String]    = js.undefined

@@ -9,5 +9,5 @@ import scala.scalajs.js
 trait MediaDeviceInfo extends js.Object {
   val deviceId: String
   val label: String
-  val kind: String
+  val kind: compat.MediaDeviceInfoKind
 }

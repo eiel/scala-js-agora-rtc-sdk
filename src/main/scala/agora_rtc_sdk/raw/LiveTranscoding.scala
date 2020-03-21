@@ -1,5 +1,7 @@
 package agora_rtc_sdk.raw
 
+import agora_rtc_sdk.raw.compat.VideoCodecProfile
+
 import scala.scalajs.js
 
 /**
@@ -7,15 +9,15 @@ import scala.scalajs.js
   */
 trait LiveTranscoding extends js.Object {
   val audioBitRate: Short
-  val audioChannels: Byte
-  val audioSampleRate: Int
+  val audioChannels: compat.AudioChannels
+  val audioSampleRate: compat.AudioSampleRate
   val backgroundColor: Int
   val height: Int
   val lowLatency: Boolean
   val transcodingUsers: LiveTranscodingUsers
   val userCount: Int
   val videoBitrate: Short
-  val videoCodecProfile: Short
+  val videoCodecProfile: compat.VideoCodecProfile
   val videoFramerate: Byte
   val videoGop: Byte
   val width: Int
@@ -25,15 +27,15 @@ object LiveTranscoding {
   @inline
   def apply(
       audioBitRate: Short,
-      audioChannels: Byte,
-      audioSampleRate: Int,
+      audioChannels: compat.AudioChannels,
+      audioSampleRate: compat.AudioSampleRate,
       backgroundColor: Int,
       height: Int,
       lowLatency: Boolean,
       transcodingUsers: LiveTranscodingUsers,
       userCount: Int,
       videoBitrate: Short,
-      videoCodecProfile: Short,
+      videoCodecProfile: VideoCodecProfile,
       videoFramerate: Byte,
       videoGop: Byte,
       width: Int,
@@ -56,31 +58,31 @@ object LiveTranscoding {
   @inline
   def create(
       _audioBitRate: Short,
-      _audioChannels: Byte,
-      _audioSampleRate: Int,
+      _audioChannels: compat.AudioChannels,
+      _audioSampleRate: compat.AudioSampleRate,
       _backgroundColor: Int,
       _height: Int,
       _lowLatency: Boolean,
       _transcodingUsers: LiveTranscodingUsers,
       _userCount: Int,
       _videoBitrate: Short,
-      _videoCodecProfile: Short,
+      _videoCodecProfile: compat.VideoCodecProfile,
       _videoFramerate: Byte,
       _videoGop: Byte,
       _width: Int,
   ): LiveTranscoding = new LiveTranscoding {
-    override val audioBitRate: SoundId                  = _audioBitRate
-    override val audioChannels: Volume                  = _audioChannels
-    override val audioSampleRate: Int                   = _audioSampleRate
-    override val backgroundColor: Int                   = _backgroundColor
-    override val height: Int                            = _height
-    override val lowLatency: Boolean                    = _lowLatency
-    override val transcodingUsers: LiveTranscodingUsers = _transcodingUsers
-    override val userCount: Int                         = _userCount
-    override val videoBitrate: SoundId                  = _videoBitrate
-    override val videoCodecProfile: SoundId             = _videoCodecProfile
-    override val videoFramerate: Volume                 = _videoFramerate
-    override val videoGop: Volume                       = _videoGop
-    override val width: Int                             = _width
+    override val audioBitRate: Short                         = _audioBitRate
+    override val audioChannels: compat.AudioChannels         = _audioChannels
+    override val audioSampleRate: compat.AudioSampleRate     = _audioSampleRate
+    override val backgroundColor: Int                        = _backgroundColor
+    override val height: Int                                 = _height
+    override val lowLatency: Boolean                         = _lowLatency
+    override val transcodingUsers: LiveTranscodingUsers      = _transcodingUsers
+    override val userCount: Int                              = _userCount
+    override val videoBitrate: SoundId                       = _videoBitrate
+    override val videoCodecProfile: compat.VideoCodecProfile = _videoCodecProfile
+    override val videoFramerate: Volume                      = _videoFramerate
+    override val videoGop: Volume                            = _videoGop
+    override val width: Int                                  = _width
   }
 }

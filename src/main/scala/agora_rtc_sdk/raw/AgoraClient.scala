@@ -152,7 +152,7 @@ trait AgoraClient extends js.Object {
     * @param event "stream-published" | "stream-added" | "stream-removed" | "stream-subscribed" | "peer-leave" | "mute-audio" | "unmute-audio" | "mute-video" | "unmute-video" | "client-banned" | "active-speaker" | "error"
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#on
     */
-  def on(event: String, callback: js.Function1[js.Any, Unit]): Unit = js.native
+  def on(event: compat.EventType, callback: js.Function1[js.Any, Unit]): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#publish
@@ -185,13 +185,13 @@ trait AgoraClient extends js.Object {
     * @param callback
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#renewchannelkey
     */
-  def secClientRole(role: String, callback: js.Function1[Any, Unit]): Unit = js.native
+  def secClientRole(role: compat.ClientRole, callback: js.Function1[Any, Unit]): Unit = js.native
 
   /**
     * @param encryptionMode "aes-128-xts" | "aes-256-xts" | "aes-128-ecb"
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setencryptionmode
     */
-  def setEncryptionMode(encryptionMode: String): Unit = js.native
+  def setEncryptionMode(encryptionMode: compat.EntcryptionMode): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setencryptionsecret
@@ -216,12 +216,12 @@ trait AgoraClient extends js.Object {
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setremotevideostreamtype
     */
-  def setRemoteVideoStreamType(stream: AgoraStream, streamType: Short): Unit = js.native
+  def setRemoteVideoStreamType(stream: AgoraStream, streamType: compat.VideoStreamType): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setremotevideostreamtype
     */
-  def setStreamFallbackOption(stream: AgoraStream, fallbackType: Short): Unit = js.native
+  def setStreamFallbackOption(stream: AgoraStream, fallbackType: compat.StreamFallBackType): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setturnserver

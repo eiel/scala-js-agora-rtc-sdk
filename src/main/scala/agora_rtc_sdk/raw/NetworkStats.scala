@@ -7,5 +7,5 @@ import scala.scalajs.js
   */
 @native
 trait NetworkStats extends js.Object {
-  val NetworkType: String
+  val NetworkType: compat.NetworkType
 }

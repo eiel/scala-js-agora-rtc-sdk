@@ -7,10 +7,10 @@ import scala.scalajs.js
   */
 @js.native
 trait LocalAudioStats extends js.Object {
-  val CodecType: js.UndefOr[String]      = js.undefined
-  val MuteState: js.UndefOr[String]      = js.undefined
-  val RecordingLevel: js.UndefOr[String] = js.undefined
-  val SamplingRate: js.UndefOr[String]   = js.undefined
-  val SendBitrate: js.UndefOr[String]    = js.undefined
-  val SendLevel: js.UndefOr[String]      = js.undefined
+  val CodecType: js.UndefOr[compat.AudioCodecType] = js.undefined
+  val MuteState: js.UndefOr[compat.MuteState]      = js.undefined
+  val RecordingLevel: js.UndefOr[String]           = js.undefined
+  val SamplingRate: js.UndefOr[String]             = js.undefined
+  val SendBitrate: js.UndefOr[String]              = js.undefined
+  val SendLevel: js.UndefOr[String]                = js.undefined
 }
