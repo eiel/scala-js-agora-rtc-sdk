@@ -7,5 +7,5 @@ import scala.scalajs.js
   */
 @js.native
 trait MediaStreamTrack extends js.Object {
-  val kind: String
+  val kind: compat.MediaStreamTrackKind
 }

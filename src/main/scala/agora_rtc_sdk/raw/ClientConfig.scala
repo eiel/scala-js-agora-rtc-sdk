@@ -7,8 +7,8 @@ import scala.scalajs.js.UndefOr
   * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.clientconfig.html
   */
 trait ClientConfig extends js.Object {
-  val codec: String
-  val mode: String
+  val codec: compat.VideoCodecType
+  val mode: compat.ClientConfigMode
   val proxyServer: js.UndefOr[String]                = js.undefined
   val turnServer: js.UndefOr[ClientConfigTurnServer] = js.undefined
 }
@@ -16,8 +16,8 @@ trait ClientConfig extends js.Object {
 object ClientConfig {
   @inline
   def apply(
-      codec: String,
-      mode: String,
+      codec: compat.VideoCodecType,
+      mode: compat.ClientConfigMode,
       proxyServer: js.UndefOr[String] = js.undefined,
       turnServer: js.UndefOr[ClientConfigTurnServer] = js.undefined,
   ): ClientConfig = create(
@@ -29,13 +29,13 @@ object ClientConfig {
 
   @inline
   def create(
-      _codec: String,
-      _mode: String,
+      _codec: compat.VideoCodecType,
+      _mode: compat.ClientConfigMode,
       _proxyServer: js.UndefOr[String],
       _turnServer: js.UndefOr[ClientConfigTurnServer],
   ): ClientConfig = new ClientConfig {
-    override val codec: String                               = _codec
-    override val mode: String                                = _mode
+    override val codec: compat.VideoCodecType                = _codec
+    override val mode: compat.ClientConfigMode               = _mode
     override val proxyServer: UndefOr[String]                = _proxyServer
     override val turnServer: UndefOr[ClientConfigTurnServer] = _turnServer
   }
