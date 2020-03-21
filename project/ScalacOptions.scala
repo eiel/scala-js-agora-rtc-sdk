@@ -28,7 +28,7 @@ object ScalacOptions {
     "-Ywarn-unused-import",
   )
 
-  val forScalaJS: Seq[String] = Seq(
+  val forScalaJS06: Seq[String] = Seq(
     "-P:scalajs:sjsDefinedByDefault",
   )
 }

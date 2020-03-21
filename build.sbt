@@ -1,8 +1,8 @@
-lazy val scala212 = "2.12.8"
-lazy val scala213 = "2.13.0-RC1"
+lazy val scala212 = "2.12.11"
+lazy val scala213 = "2.13.0"
 
 ThisBuild / organization := "info.eiel"
-ThisBuild / scalaVersion := scala212
+ThisBuild / scalaVersion := scala213
 ThisBuild / crossScalaVersions := Seq(scala212, scala213)
 
 ThisBuild / scalacOptions ++= ScalacOptions.basic
@@ -11,8 +11,8 @@ ThisBuild / scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) m
   case _             => Seq()
 })
 ThisBuild / scalacOptions ++= {
-  if (scalaJSVersion.startsWith("1.0")) ScalacOptions.forScalaJS.filter(_ != "-P:scalajs:sjsDefinedByDefault")
-  else ScalacOptions.forScalaJS
+  if (scalaJSVersion.startsWith("1.0")) ScalacOptions.forScalaJS06.filter(_ != "-P:scalajs:sjsDefinedByDefault")
+  else ScalacOptions.forScalaJS06
 }
 
 lazy val root = (project in file("."))

@@ -226,7 +226,7 @@ trait AgoraClient extends js.Object {
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#setturnserver
     */
-  def setTurnServer(config: ClientConfigTurnServer)
+  def setTurnServer(config: ClientConfigTurnServer): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.client.html#startlivestreaming
