@@ -149,7 +149,7 @@ trait AgoraStream extends js.Object {
     * @param event "accessAllowed" | "accessDenied" | "stopScreenSharing" | "audioMixingPlayed" | "audioMixingFinished"
     * @param onSuccess
     */
-  def on(event: String, onSuccess: js.Function0[Unit]): Unit = js.native
+  def on(event: String, onSuccess: js.Function1[js.Any, Unit]): Unit = js.native
 
   /**
     * @see https://docs.agora.io/en/Voice/API%20Reference/web/v2.6.1/interfaces/agorartc.stream.html#pausealleffects
